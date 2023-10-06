@@ -1,6 +1,5 @@
 import Block from '../../utils/Block';
 
-
 interface ButtonProps {
   label: string;
   events: {
@@ -8,12 +7,12 @@ interface ButtonProps {
   };
 }
 
-export class Button extends Block<ButtonProps> {
+export class Button extends Block {
   constructor(props: ButtonProps) {
     super('button', props);
   }
 
   render() {
-    return this.compile(`{{label}}`, this.props);
+    return this.compile('{{label}}', this.props);
   }
 }

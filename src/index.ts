@@ -1,12 +1,12 @@
-import { HomePage } from './pages/Home';
+import { HomePage } from "./pages/HomePage";
 
 window.addEventListener('DOMContentLoaded', () => {
   const root = document.querySelector('#app')!;
 
-  const homePage = new HomePage({ title: 'Home page' });
+  const component = new HomePage();
 
-  root.append(homePage.getContent()!);
+  root.append(component.element!);
 
-  homePage.dispatchComponentDidMount();
+  component.dispatchComponentDidMount();
 });
 
